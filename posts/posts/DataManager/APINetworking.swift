@@ -34,19 +34,8 @@ class APINetworking {
                let modelInstance = try?  JSONDecoder().decode(StandError.self, from: data) {
                 let errorObject = modelInstance.toError()
                 LogHelper.log(error: errorObject, request: urlRequest, type: Response.self)
-                switch APIErrorEnum(rawValue: errorObject.code ?? "") {
-                case .expiredOrMissingToken:
-                    print("Refresh Token")
-                default:
-                    onError?(errorObject)
-                }
             } else {
-                if let data = response.data,
-                   let string = String(data: data, encoding: .utf8) {
-                    print(string)
-                }
                 LogHelper.log(error: error, request: urlRequest, type: Response.self)
-                
                 onError?(NSError.unknownError)
             }
         }
@@ -58,9 +47,8 @@ class APINetworking {
                     LogHelper.log(response: result, request: urlRequest, type: Response.self)
                     onSuccess?(decodedObject)
                 } catch let DecodingError.typeMismatch(_, context) {
-                    let error = NSError.initWith(code: "0", message: "La información obtenida no contiene el formato esperado.", title: "Error de información", detail: "\(context.debugDescription)\n \(context.codingPath)")
+                    let error = ErrorInformation(description: context.debugDescription, codingPath: context.codingPath)
                     LogHelper.log(error: error, request: urlRequest, type: Response.self)
-                    print(result)
                     onError?(NSError.unknownError)
                 } catch {
                     LogHelper.log(error: error, request: urlRequest, type: Response.self)
@@ -81,5 +69,10 @@ class APINetworking {
                 successBlock(response, result)
             }
         }
+    }
+    
+    static func ErrorInformation(description: String, codingPath: [CodingKey]) -> Error {
+        let error = NSError.initWith(code: "0", message: "La información obtenida no contiene el formato esperado.", title: "Error de información", detail: "\(description)\n \(codingPath)")
+        return error
     }
 }
