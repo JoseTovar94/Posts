@@ -15,8 +15,6 @@ extension XCTestCase {
         if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                //let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-                //let jsonResult = try JSONDecoder().decode([PostTest].self, from: data)
                 return data
             } catch {
                 // handle error
@@ -47,19 +45,3 @@ extension XCTestCase {
         return [Comments]()
     }
 }
-/*
-struct PostTest: Codable {
-    let userId: Int?
-    let id: Int?
-    let title: String?
-    let body: String?
-    var isFavorite: Bool?
-    var isRead: Bool?
-}
-*/
-
-/*
-let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
-let decodedObject = try JSONDecoder().decode([PostTest].self, from: data)
-print("decode:", decodedObject)
-*/
