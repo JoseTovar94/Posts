@@ -8,7 +8,7 @@
 import UIKit
 extension UILabel {
     func setupLabel(size: CGFloat, color: UIColor = .postSecondary) {
-        self.font = UIFont.boldSystemFont(ofSize: size)
+        self.font = UIFont(name: Constants.AppFonts.bold, size: size)
         self.textAlignment = .left
         self.translatesAutoresizingMaskIntoConstraints = false
         self.adjustsFontSizeToFitWidth = true

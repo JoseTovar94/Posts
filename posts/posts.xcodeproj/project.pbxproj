@@ -11,6 +11,11 @@
 		4B1638FC27B03E5400646C1D /* post.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B1638FB27B03E5400646C1D /* post.json */; };
 		4B1638FE27B0597800646C1D /* postDetailTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1638FD27B0597800646C1D /* postDetailTest.swift */; };
 		4B16390027B05C8300646C1D /* postDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B1638FF27B05C8300646C1D /* postDetail.json */; };
+		4B16390827B06D5900646C1D /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B16390427B06D5900646C1D /* DMSans-Regular.ttf */; };
+		4B16390927B06D5900646C1D /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B16390527B06D5900646C1D /* DMSans-Medium.ttf */; };
+		4B16390A27B06D5900646C1D /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B16390627B06D5900646C1D /* DMSans-Bold.ttf */; };
+		4B16390B27B06D5900646C1D /* DMSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B16390727B06D5900646C1D /* DMSans-Italic.ttf */; };
+		4B16390D27B06F1E00646C1D /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B16390C27B06F1E00646C1D /* UIFont+Extension.swift */; };
 		4B26D6A527AE12370058F873 /* HomeViewModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26D6A427AE12370058F873 /* HomeViewModelController.swift */; };
 		4B26D6A827AE12CA0058F873 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26D6A727AE12CA0058F873 /* Post.swift */; };
 		4B26D6AC27AE26FC0058F873 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26D6AA27AE26FC0058F873 /* HomeTableViewCell.swift */; };
@@ -91,6 +96,11 @@
 		4B1638FB27B03E5400646C1D /* post.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = post.json; sourceTree = "<group>"; };
 		4B1638FD27B0597800646C1D /* postDetailTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postDetailTest.swift; sourceTree = "<group>"; };
 		4B1638FF27B05C8300646C1D /* postDetail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = postDetail.json; sourceTree = "<group>"; };
+		4B16390427B06D5900646C1D /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		4B16390527B06D5900646C1D /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		4B16390627B06D5900646C1D /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		4B16390727B06D5900646C1D /* DMSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Italic.ttf"; sourceTree = "<group>"; };
+		4B16390C27B06F1E00646C1D /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		4B26D6A427AE12370058F873 /* HomeViewModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelController.swift; sourceTree = "<group>"; };
 		4B26D6A727AE12CA0058F873 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		4B26D6AA27AE26FC0058F873 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -194,6 +204,25 @@
 				4B1638FF27B05C8300646C1D /* postDetail.json */,
 			);
 			path = Json;
+			sourceTree = "<group>";
+		};
+		4B16390227B06D4500646C1D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4B16390327B06D5900646C1D /* DM Sans */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4B16390327B06D5900646C1D /* DM Sans */ = {
+			isa = PBXGroup;
+			children = (
+				4B16390427B06D5900646C1D /* DMSans-Regular.ttf */,
+				4B16390527B06D5900646C1D /* DMSans-Medium.ttf */,
+				4B16390627B06D5900646C1D /* DMSans-Bold.ttf */,
+				4B16390727B06D5900646C1D /* DMSans-Italic.ttf */,
+			);
+			path = "DM Sans";
 			sourceTree = "<group>";
 		};
 		4B26D6A327AE12010058F873 /* ViewModel */ = {
@@ -379,6 +408,7 @@
 				4B3ED7B127ADF9E600D6B8BA /* UILabel+Extension.swift */,
 				4B3ED7C327ADFBE900D6B8BA /* UIView+Extension.swift */,
 				4B97BD0D27AF790B002601A7 /* UIButton+Extension.swift */,
+				4B16390C27B06F1E00646C1D /* UIFont+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -406,6 +436,7 @@
 		4B3ED7C027ADFB9200D6B8BA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4B16390227B06D4500646C1D /* Fonts */,
 				4B16390127B05EAD00646C1D /* Json */,
 				4B3ED76F27ADF46000D6B8BA /* Assets.xcassets */,
 				4B3ED7CC27AE01E600D6B8BA /* Color.xcassets */,
@@ -577,9 +608,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B97BD0427AF0400002601A7 /* CommentsTableViewCell.xib in Resources */,
+				4B16390827B06D5900646C1D /* DMSans-Regular.ttf in Resources */,
 				4B16390027B05C8300646C1D /* postDetail.json in Resources */,
 				4B3ED7D327AE0CFC00D6B8BA /* Home.storyboard in Resources */,
+				4B16390B27B06D5900646C1D /* DMSans-Italic.ttf in Resources */,
 				4B3ED7BB27ADFAB600D6B8BA /* HUDView.xib in Resources */,
+				4B16390927B06D5900646C1D /* DMSans-Medium.ttf in Resources */,
 				4B26D6AD27AE26FC0058F873 /* HomeTableViewCell.xib in Resources */,
 				4B97BCFC27AE4B80002601A7 /* Detail.storyboard in Resources */,
 				4B3ED77327ADF46000D6B8BA /* LaunchScreen.storyboard in Resources */,
@@ -589,6 +623,7 @@
 				4B3ED76E27ADF45F00D6B8BA /* Main.storyboard in Resources */,
 				4B3ED7CD27AE01E600D6B8BA /* Color.xcassets in Resources */,
 				4B1638FC27B03E5400646C1D /* post.json in Resources */,
+				4B16390A27B06D5900646C1D /* DMSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,6 +757,7 @@
 				4B97BD0E27AF790B002601A7 /* UIButton+Extension.swift in Sources */,
 				4B3ED79E27ADF72500D6B8BA /* APINetworking.swift in Sources */,
 				4B3ED7B227ADF9E600D6B8BA /* UILabel+Extension.swift in Sources */,
+				4B16390D27B06F1E00646C1D /* UIFont+Extension.swift in Sources */,
 				4B3ED7D127AE0CE300D6B8BA /* HomeViewController.swift in Sources */,
 				4B3ED7B727ADFA4400D6B8BA /* CircularView.swift in Sources */,
 				4B26D6B327AE34270058F873 /* DetailViewController.swift in Sources */,

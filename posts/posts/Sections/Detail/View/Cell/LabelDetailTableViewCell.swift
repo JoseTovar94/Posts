@@ -60,7 +60,7 @@ class LabelDetailTableViewCell: UITableViewCell {
     // MARK: Setup
     func updateView() {
         descriptionLabel.text = detailViewModel?.body
-        infoUserLabel.text = String(detailViewModel?.id ?? 0)
+        infoUserLabel.text = getTextUserInfo()
         
         contenView.addSubview(titleDescriptionLabel)
         NSLayoutConstraint.activate([
@@ -90,5 +90,12 @@ class LabelDetailTableViewCell: UITableViewCell {
             infoUserLabel.rightAnchor.constraint(equalTo: titleDescriptionLabel.rightAnchor),
             infoUserLabel.bottomAnchor.constraint(equalTo: contenView.bottomAnchor, constant: -(Constants.Size.bottomAnchor))
         ])
+    }
+    
+    func getTextUserInfo() -> String {
+        let userID = "User: " + String(detailViewModel?.id ?? 0)
+        let titleText = "Title: " + (detailViewModel?.title ?? "")
+        let infoUser = userID + "\n\n" + titleText
+        return infoUser
     }
 }
